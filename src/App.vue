@@ -1,15 +1,29 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <Form @add="saveTodo" />
+  <ul>
+    <li v-for="todo in todos" v-bind:key="todo.id">{{todo.title}}</li>
+  </ul>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Form from './components/Form.vue'
+import {ref} from "vue";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Form
+  },
+  setup(){
+    let todos = ref([]);
+    const saveTodo = function(data){
+      console.log("saveTodo-from App.vue", data)
+      todos.value = [...todos.value, {title: data.title, id:data.id, description:data.description}]
+    }
+    return{
+      saveTodo,
+      todos
+    }
   }
 }
 </script>
