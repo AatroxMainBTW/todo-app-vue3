@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="">
     <form @submit.prevent="addTodo">
       <div class="space-y-2">
         <div class="">
