@@ -15,7 +15,7 @@
           </div>
           <button
           class="bg-red-700 text-xs text-white py-2 px-2 rounded-lg hover:bg-red-500 transition duration-500 focus:outline-none"
-          @click="deletetodo"
+          @click="deletetodo(todo)"
           >
           Delete
           </button>
@@ -45,9 +45,12 @@ export default {
       console.log("saveTodo-from App.vue", data)
       todos.value = [...todos.value, {title: data.title, id:data.id, description:data.description, tag:data.tag}]
     }
-    const deletetodo = function(){
-      console.log("ssss",todos.value)
-      todos.value.pop();
+    const deletetodo = function(data){
+      //console.log("ssss",data)
+      var index = todos.value.indexOf(data);
+      console.log(index);
+      todos.value.splice(index)
+
     }
     return{
       saveTodo,
