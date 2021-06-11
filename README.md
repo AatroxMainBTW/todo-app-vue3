@@ -1,6 +1,6 @@
 # todo-app
 
-Todo app made wiht vueJS 3
+Todo app made with vueJS 3
 
 
 ## Screenshots
