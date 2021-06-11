@@ -1,0 +1,116 @@
+@import './variables.scss';
+
+
+#app{
+  background-color: $background_color;
+  
+}
+body{
+  background-color: $background_color;
+}
+.addBtnstyle{
+  background-color: $blue;
+  color: $blackText;
+  padding-top:1ch;
+  padding-right:1ch;
+  padding-bottom:1ch;
+  padding-left:1ch;
+  border-radius: 1ch;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  &:hover{
+    background-color: $lightblue;
+  }
+ }
+
+ .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: $background_color;
+    align-items: baseline;
+    
+    div{ 
+      text-align: center;
+        label{
+      margin-right: 1ch;
+      color: #fff;
+      }
+        input{
+      border: none;
+        padding-top:1ch;
+        padding-right:1ch;
+        padding-bottom:1ch;
+        padding-left:1ch;
+        border-radius: 1ch;
+          &:focus{
+            outline: none;
+            border-bottom: 3px solid $blue;
+      }
+     }
+    }
+ }
+
+.card{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  border-radius: 5ch;
+  margin-top: 5ch;
+  background-color: $secondary;
+  overflow: inherit;
+  padding-top:1ch;
+  padding-right:5ch;
+  padding-bottom:1ch;
+  padding-left:5ch;
+    .card-title{
+      color:$primary;
+      
+      text-align: left; 
+    }
+    .hr1{
+      opacity: 0.5;
+      width: 75em;
+      align-self: flex-start;
+    }
+    .card-description{
+      color:$primary;
+      opacity: 0.3;
+      text-align: left;
+    }
+    .card-tag{
+      background-color:$low;
+      color:$primary;
+      border-radius: 3ch;
+      padding-top:1ch;
+      padding-right:1ch;
+      padding-bottom:1ch;
+      padding-left:1ch;
+      margin-top: 1ch;
+      text-align: left;
+      text-align: center;
+      width:3em;
+    }
+    .deleteBtnStyle{
+      background-color: $deleteback;
+      color: $blackText;
+      padding-top:1ch;
+      padding-right:1ch;
+      padding-bottom:1ch;
+      padding-left:1ch;
+      border-radius: 1ch;
+      border: none;
+      text-align: center;
+      text-decoration: none;
+      margin-top: 2ch;
+      
+      &:hover{
+        background-color: $lightdeleteback;
+      }
+}
+
+
+}
+
+

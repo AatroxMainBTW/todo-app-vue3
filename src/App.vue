@@ -1,20 +1,22 @@
 <template>
-  <div class="">
+  <div id="card-container" class="card-container">
     <Form @add="saveTodo" />
     <div v-for="todo in todos" v-bind:key="todo.id" class="space-y-2 ml-80">
-      <div id="card" class="bg-gray-500 bg-opacity-20 rounded-xl w-96 px-2 py-2 mt-5">
-        <div id="card-title" class="text-white text-left ml-2">
+      <div id="card" class="card">
+        <div id="card-title" class="card-title">
           <span>{{todo.title}}</span>
         </div>
-        <hr class="opacity-50" />
-        <div id="card-description" class="text-white text-xs text-left ml-5 mt-3">
+        <div class="hr1">
+          <hr  />
+        </div>
+        <div id="card-description" class="card-description">
           <span>{{todo.description}}</span>
         </div>
-          <div id="card-tag" class="text-white text-xs mt-3 bg-gray-500 rounded-full px-2 py-2 w-20">
+          <div id="card-tag" class="card-tag">
               <span>{{todo.tag}}</span>
           </div>
           <button
-          class="bg-red-700 text-xs text-white py-2 px-2 rounded-lg hover:bg-red-500 transition duration-500 focus:outline-none"
+          class="deleteBtnStyle"
           @click="deletetodo(todo)"
           >
           Delete
@@ -22,7 +24,6 @@
       </div>
     </div>
   </div>
-
 
 </template>
 
